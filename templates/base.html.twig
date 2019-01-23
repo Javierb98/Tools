@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+{% block header %}
+    <head xmlns="http://www.w3.org/1999/html">
+        <title>Alms Easy</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style>
+            .carousel-inner > .item > img,
+            .carousel-inner > .item > a > img {
+                display: block;
+                max-width: 50%;
+                height: 400px !important;
+                margin: auto;
+            }
+            body {
+                position: relative;
+                margin: 0;
+                padding-bottom: 6rem;
+                min-height: 100%;
+            }
+            html {
+                height: 100%;
+                box-sizing: border-box;
+            }
+            .footer {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                padding: 1rem;
+                background-color: lightgrey;
+                text-align: center;
+            }
+            .col-centered{
+                float: none;
+                margin: 0 auto;
+            }
+        </style>
+    </head>
+{% endblock %}
+{% block body%}
+    {% include 'navbar.html.twig'  %}
+    {% block content %}
+
+    {% endblock %}
+    {% include 'footer.html.twig' %}
+{% endblock %}
